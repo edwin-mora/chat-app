@@ -1,3 +1,4 @@
+//import
 import React from "react";
 import {
   View,
@@ -9,7 +10,7 @@ import {
   TouchableOpacity,
   Pressable,
 } from "react-native";
-
+// importing background image for app
 import BackgroundImage from "../assets/Background-Image.png";
 
 export default class Start extends React.Component {
@@ -20,7 +21,7 @@ export default class Start extends React.Component {
       bgColor: this.colors,
     };
   }
-
+//setting state so user can select a backgrouncd color on chat screen
   changeBgColor = (newColor) => {
     this.setState({ bgColor: newColor });
   };
@@ -35,6 +36,7 @@ export default class Start extends React.Component {
 
   render() {
     return (
+      //wrapping everything a view
       <View style={styles.container}>
         <ImageBackground
           source={BackgroundImage}
@@ -56,7 +58,7 @@ export default class Start extends React.Component {
             </View>
 
             <View style={styles.colorBox}>
-              <Text style={styles.chooseColor}> Color preference: </Text>
+              <Text style={styles.chooseColor}> Choose a background color: </Text>
             </View>
 
             <View style={styles.colorArray}>
